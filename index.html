@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Атланта</title>
+
+
+
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/stl.css">
+    <script type="text/javascript" src="slick/slick.js"></script>
+
+    <script src="js/search.js"></script>
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="navigation_body">
+            <div class="navigation__menu">
+                <a href="#" class="navigation__menu-item">Начало</a>
+                <a href="#" class="navigation__menu-item">Контакты</a>
+                <a href="#" class="navigation__menu-item">Статьи</a>
+                <a href="#" class="navigation__menu-item">О компании</a>
+                <a href="#" class="navigation__menu-item">Новости</a>
+                <a href="#" class="navigation__menu-item">Доставка и оплата</a>
+                <a href="#" class="navigation__menu-item">Гарантии</a>
+            </div>
+
+            <div class="navigation__login">
+                <a href="#" class="navigation__login-login"><img src="images/login.png" alt="img">Вход</a>
+                <a href="#" class="navigation__login-register"><img src="images/sin.png" alt="img">Регистрация</a>
+            </div>
+
+            <div class="navigation__lang">
+                <a href="#" class="navigation__lang-item"><img src="images/FlagofUnitedKingdom.png" alt="English"
+                                                           title="English"></a>
+                <a href="#" class="navigation__lang-item"><img src="images/FlagofRussia.png" alt="Русский"
+                                                           title="Русский"></a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="header">
+        <div class="header_body">
+            <div class="header__logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="header__search-wrapper">
+
+                <div class="header__help">
+                    <a href="#">Не дозвонились?</a>
+                </div>
+
+                <div class="header__phone">
+                    <span id="phone1" style="font-size:11px;">
+                    <img src="images/Layer4.png" alt="mts">
+                            (050)
+                    <span style="font-size:18px;">757-75-77</span>
+                    </span>
+                    <span id="phone2" style="font-size:11px;">
+                    <img src="images/Layer3.png" alt="kyiv">
+                            (067)
+                    <span style="font-size:18px;">757-75-77</span>
+                    </span>
+                </div>
+
+
+                <div class="header__search-bar">
+                    <form method="get" action="#">
+                        <input type="text" id="search" placeholder="Поиск по сайту...">
+                        <input type="submit" value="">
+                    </form>
+
+                    <ul class="search_result"></ul>
+                </div>
+            </div>
+
+            <div class="header__bag-wrapper">
+                <div class="header__bag-img">
+                    <a href="#"><img src="images/1429542581package.png" alt="img"></a>
+                </div>
+
+                <div class="header__bag">
+                    <div class="header__bag-title"><a href="#">Корзина</a></div>
+                    <div class="header__bag-goods">Товаров: <span id="goods-num">5</span></div>
+                    <div class="header__bag-goods">На сумму: <span id="goods-sum">5000 грн</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu">
+        <div class="menu_body">
+            <ul class="menu__wrapper">
+                <li class="menu__item"><a href="#">Женская одежда</a></li>
+                <li class="menu__item"><a href="#">Мужская одежда</a></li>
+                <li class="menu__item"><a href="#">Детская одежда</a></li>
+                <li class="menu__item"><a href="#">Подарочная карта</a></li>
+                <li class="menu__item"><a href="#">Бренды</a></li>
+                <li class="menu__item"><a href="#">Новинки</a></li>
+                <li class="menu__item"><a href="#">Распродажа</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="slider">
+        <div class="navigation_slider">
+            <div class="bxSlider">
+                <div><img src="images/1.png" alt=""></div>
+                <div><img src="images/2.png" alt=""></div>
+                <div><img src="images/3.jpg" alt=""></div>
+                <div><img src="images/4.jpg" alt=""></div>
+                <div><img src="images/5.jpg" alt=""></div>
+                <div><img src="images/6.jpg" alt=""></div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.bxSlider').slick({
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+
+    </script>
+</body>
+
+</html>
