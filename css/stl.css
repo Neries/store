@@ -1,6 +1,3 @@
-div,
-form,
-ul,
 html,
 body {
     margin: 0;
@@ -9,39 +6,59 @@ body {
     color: white;
 }
 
-
-/*NAVIGATION*/
-
-.navigation {
-    font-size: 12px;
-    height: 35px;
-    background: #292929;
-    overflow: hidden;
-}
-
 a {
     text-decoration: none;
     color: white;
     outline: none;
 }
 
-.navigation_body {
-    width: 1000px;
+.body {
+    width: 75%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.navigation_body a:hover {
-    padding-top: 100%;
-    padding-bottom: 100%;
+/*NAVIGATION*/
+
+/*highlight*/
+
+.navigation__login-login:hover, .navigation__login-register:hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #3c3c3c;
+}
+.navigation__menu-item:hover{
     background-color: #3c3c3c;
 }
 
-.navigation_body div {
-    display: inline;
-    line-height: 35px;
+.navigation__lang-item:hover{
+    padding-top: 17px;
+    padding-bottom: 3px;
+    background-color: #3c3c3c;
 }
 
-.navigation__menu-item {
+
+.navigation {
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    background: #292929;
+    overflow: hidden;
+    
+}
+
+.navigation__menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navigation__menu-item, .navigation__login-login, .navigation__login-register{
+    line-height: 35px;
+    height: 35px;
     margin-right: 10px;
     padding-right: 5px;
     padding-left: 5px;
@@ -50,24 +67,14 @@ a {
 /*lang*/
 
 .navigation__lang {
-    float: right;
+    padding-top: 7px
 }
 
-.navigation__lang-item img {
-    vertical-align: middle;
-    padding-right: 10px;
+.navigation__lang-item{
+    margin-left: 5px;
 }
 
 /*auth*/
-
-.navigation__login {
-    float: right;
-    margin-left: 40px;
-}
-
-.navigation__login a {
-    padding-right: 10px;
-}
 
 .navigation__login-register {
     color: #efb247;
@@ -80,29 +87,35 @@ a {
 
 /*********HEADER**********/
 
-.header__logo img {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    /*тень для лого*/
-}
 
-.header {
-    height: 166px;
+.header{
+    background: #292929;
+    overflow: hidden;
+    min-height: 166px;
     background: linear-gradient(to top, #DA1C25, #961C25);
 }
 
-.header_body {
-    width: 1000px;
-    margin: 0 auto;
+
+.header__logo, .header__search-wrapper, .header__bag-wrapper{
+    margin-top: 30px;
 }
 
-.header_body > div {
-    float: left;
-    margin: 30px 35px 0 0;
+
+.header__logo{
+    width: 343px;
 }
+
+.header__logo img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    /*тень для лого*/
+}
+
 
 /*help+phones*/
 
 .header__help {
+    margin-bottom: 12px;
     font-size: 12px;
     text-decoration: underline;
     text-align: right;
@@ -113,8 +126,11 @@ a {
     margin-bottom: 7px;
 }
 
-#phone2 {
-    float: right;
+.header__phone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /*search form*/
@@ -181,12 +197,12 @@ a {
     margin-left: 30px;
 }
 
-.header__bag-wrapper > div {
-    display: inline-block;
+.header__bag-wrapper {
+    display: inline-flex;
+    margin-bottom: 30px;
 }
 
-.header__bag div {
-    display: block;
+.header__bag-title, .header__bag-goods{
     margin-top: 5px;
     margin-left: 12px;
 
@@ -203,30 +219,33 @@ a {
 
 /************MENU**************/
 
-.menu {
+
+.menu .body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu__item{
     background: #34586D;
     margin: -25px auto 20px auto;
     height: 50px;
-    width: 1000px;
-    border-radius: 6px;
-}
-
-.menu__wrapper {
     list-style-type: none;
-}
-
-.menu__wrapper li {
     float: left;
     border-right: 1px solid #234153;
     border-left: 1px solid #5d7582;
+    
 }
 
+
 .menu__wrapper li:first-child {
-    /*убираем полосы*/
+    border-radius: 6px 0 0 6px;
+/*    убираем полосы*/
     border-left: 0;
 }
 
 .menu__wrapper li:last-child {
+    border-radius: 0 6px 6px 0;
     border-right: 0;
 }
 
@@ -242,14 +261,13 @@ a {
 
 .menu__wrapper a:hover { /*обводим блоки меню*/
     border-radius: 15px;
-
     background-color: #39657a;
 }
 
 /**********СЛАЙДЕР**********/
 
 .bxSlider {
-    width: 1000px;
+    width: 75%;
     margin: 0 auto;
 }
 

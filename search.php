@@ -3,7 +3,6 @@
 
 $params = include 'params.php';
 
-
 //$params = [
 //    'host' => '',      //Хост
 //    'dbname' => '',      //Имя базы

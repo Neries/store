@@ -21,7 +21,7 @@
 
 <body>
     <section class="navigation">
-        <div class="navigation_body">
+        <div class="body">
             <div class="navigation__menu">
                 <a href="#" class="navigation__menu-item">Начало</a>
                 <a href="#" class="navigation__menu-item">Контакты</a>
@@ -31,12 +31,7 @@
                 <a href="#" class="navigation__menu-item">Доставка и оплата</a>
                 <a href="#" class="navigation__menu-item">Гарантии</a>
             </div>
-
-            <div class="navigation__login">
-                <a href="#" class="navigation__login-login"><img src="images/login.png" alt="img">Вход</a>
-                <a href="#" class="navigation__login-register"><img src="images/sin.png" alt="img">Регистрация</a>
-            </div>
-
+            
             <div class="navigation__lang">
                 <a href="#" class="navigation__lang-item"><img src="images/FlagofUnitedKingdom.png" alt="English"
                                                            title="English"></a>
@@ -44,12 +39,15 @@
                                                            title="Русский"></a>
             </div>
 
-
+            <div class="navigation__login">
+                <a href="#" class="navigation__login-login"><img src="images/login.png" alt="img">Вход</a>
+                <a href="#" class="navigation__login-register"><img src="images/sin.png" alt="img">Регистрация</a>
+            </div>
         </div>
     </section>
 
     <section class="header">
-        <div class="header_body">
+        <div class="body">
             <div class="header__logo">
                 <img src="images/logo.png" alt="">
             </div>
@@ -98,7 +96,7 @@
     </section>
 
     <section class="menu">
-        <div class="menu_body">
+        <div class="body">
             <ul class="menu__wrapper">
                 <li class="menu__item"><a href="#">Женская одежда</a></li>
                 <li class="menu__item"><a href="#">Мужская одежда</a></li>
@@ -132,7 +130,7 @@
         $(document).ready(function() {
             $('.bxSlider').slick({
                 adaptiveHeight: true,
-                autoplay: true,
+                // autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
                 responsive: [
@@ -141,8 +139,7 @@
                         settings: {
                             arrows: false,
                             centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 1
+                            centerPadding: '40px'
                         }
                     },
                     {
@@ -150,8 +147,7 @@
                         settings: {
                             arrows: false,
                             centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 1
+                            centerPadding: '40px'
                         }
                     }
                 ]
